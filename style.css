@@ -160,6 +160,11 @@ transition: all 0.3s ease 0s;
   transition: opacity .4;
   cursor: pointer;
 }
+.todos li input{
+margin-top: 5px;
+width: 20px;
+height: 15px;
+}
 
 .done{
   text-decoration: line-through;

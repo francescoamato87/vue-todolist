@@ -54,9 +54,8 @@
 
             <span :class="{done: todo.done}">{{todo.title}}</span>
 
-            <button @click="removeTodo(todo)"  type="button">
-              <i class="fas fa-trash-alt"></i>
-            </button>
+            <i @click="removeTodo(todo)" class="fas fa-trash-alt fa-lg"></i>
+
           </li>
         </ul>
 
