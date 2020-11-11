@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Vue JS -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div id="app">
+
+      <header>
+        <h1>{{title}}</h1>
+      </header>
+
+      <main>
+
+        <form @submit.prevent="addTodo">
+
+          <button class = "btn-add" type="submit" name="button">Add</button>
+
+          <button class = "btn-allDone" @click="allDone" type="button" name="button">All done</button>
+
+          <h2>...if you have to remember something, use me, your day will flow in a much more peaceful way...</h2>
+
+          <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="">
+
+        </form>
+
+
+
+        <ul class="todos">
+          <li v-for="todo in todos">
+            <input type="checkbox" v-model="todo.done" >
+
+            <span :class="{done: todo.done}">{{todo.title}}</span>
+
+            <button @click="removeTodo(todo)"  type="button">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </li>
+        </ul>
+
+      </main>
+
+    </div>
+
+<h5>Powered by Francesco A. Boolean Soldier</h5>
+
+
+
+<script src="javascript.js" ></script>
+  </body>
+</html>
