@@ -3,11 +3,12 @@ const app = new Vue({
   el:'#app',
   data:{
     title: 'MY TODO LIST',
-    newTodo:'what\'s now?!?',
+    newTodo:'',
     todos: []
   },
   methods:{
     addTodo(){
+      if(this.newTodo.trim() !== '' )
       this.todos.push({
         title: this.newTodo,
         done: false,

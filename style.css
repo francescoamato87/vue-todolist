@@ -15,7 +15,7 @@ body{
 
 #app {
   max-width: 600px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 20px;
 }
 
@@ -29,10 +29,9 @@ h1{
 
 .container{
   /* height: 100vh; */
-  margin: 0 auto;
-  width:600px;
-  background:rgba(255,255,255, .85);
-  position: relative;
+  width:650px;
+  margin: 20px auto;
+  background:rgba(255,255,255, .55);
 }
 
 main .todoTitle{
@@ -52,7 +51,7 @@ main #newTodo{
 display: flex;
 justify-content: center;
 align-items: center;
-width: 600px;
+width: 550px;
 height: 45px;
 line-height: 40px;
 margin-bottom: 40px;
@@ -74,10 +73,14 @@ main .add-todo:focus{
   background: #fff;
 }
 
+.buttons{
+  text-align: center;
+}
+
 .btn-add{
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   margin: auto;
   width: 150px;
   height: 40px;
@@ -86,7 +89,6 @@ main .add-todo:focus{
   background: #F7E89F	;
   color: red!important;
   font-weight: 700;
-  padding: 20px;
   text-transform: uppercase;
   border-radius: 6px;
   /* display: inline-block; */
@@ -105,10 +107,10 @@ transition: all 0.3s ease 0s;
 
 
 .btn-allDone{
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; */
   width: 150px;
   height: 40px;
   margin: auto;
@@ -117,7 +119,6 @@ transition: all 0.3s ease 0s;
   background: #F7E89F;
   color: red!important;
   font-weight: 700;
-  padding: 20px;
   text-transform: uppercase;
   border-radius: 6px;
   /* display: inline-block; */

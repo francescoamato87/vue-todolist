@@ -15,7 +15,7 @@
   </head>
   <body>
 
-    <div id="app">
+    <div id="app" class="container">
 
       <header>
         <h1>{{title}}</h1>
@@ -25,13 +25,22 @@
 
         <form @submit.prevent="addTodo">
 
-          <button class = "btn-add" type="submit" name="button">Add</button>
-
-          <button class = "btn-allDone" @click="allDone" type="button" name="button">All done</button>
-
           <h2>...if you have to remember something, use me, your day will flow in a much more peaceful way...</h2>
 
-          <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="">
+          <div class="buttons">
+
+            <button class = "btn-add" type="submit" name="button">Add</button>
+
+            <button class = "btn-allDone" @click="allDone" type="button" name="button">All done</button>
+
+          </div>
+
+          <input
+          placeholder="what's now?!?"
+          v-model="newTodo"
+          type="text"
+          name="newTodo"
+          id="newTodo">
 
         </form>
 
@@ -39,7 +48,9 @@
 
         <ul class="todos">
           <li v-for="todo in todos">
-            <input type="checkbox" v-model="todo.done" >
+            <input
+            type="checkbox"
+            v-model="todo.done" >
 
             <span :class="{done: todo.done}">{{todo.title}}</span>
 
